@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load humanize %}
+% load static %
+
+{% block main %}
+<div class ="container2">
+    <div class="container3">
+        <h1>about page</h1>
+    </div>
+    <div class ="container3">
+        <h3>achivement</h3>
+        <p>私はこれまでに{{num_services|intcomma}}のサービスを作りました。</p>
+    </div>
+    <div class = "container3">
+        <h3>skills</h3>
+        <ul>
+            {% for skill in skills %}
+               <li>{{ skill }}</li>
+            {% empty %}
+                <li>no skill</li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+
+{% endblock %}

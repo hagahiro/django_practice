@@ -1,0 +1,23 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="{% static 'main3.css' %}">
+
+    </head>
+    <body>
+        <div class="header">
+            <h1>django practice</h1>
+        </div>
+        <div class="navbar">
+            <a href="/"><p>to homepage</p></a>
+            <a href="/about"><p>to aboutpage</p></a>
+        </div>
+        <div class="container">
+            {% block main %}
+            
+            {% endblock %}
+        </div>
+    </body>
+</html>
